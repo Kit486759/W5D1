@@ -86,20 +86,24 @@ function GenerateOnlySymbols()
 // 58-64
 // 123-126
 let symbol = ["+",",",".","-","'","\"","&","!","?",":",";","#","~","=","/","$","£","^","(",")","_","<",">"]
-
+let resultSymbol = []
 for (let i=0;i<=symbol.length;i++){
-     result +=  symbol[i]
+    resultSymbol.push(symbol[i])
 }
+return resultSymbol;
 }
 // let result = 
-
-
-// console.log(symbol)
+console.log(GenerateOnlySymbols())
 
 function GenerateUpperAndLowerCase()
 {
     //Ie: A,B,C,D,E,F,G...Z and  a,b,c,d,e,f,g...z
+    let list = []
+    list.push(GenerateOnlyUpperCase()," & ",GenerateOnlyLowerCase())
+    return list;
 }
+
+console.log(`Create upper case and lower case ${GenerateUpperAndLowerCase()}`)
 
 // }
 document.body.innerHTML = 
@@ -116,4 +120,7 @@ Text to upper case =  <b>${GenerateOnlyUpperCase()}</b>
 <br><br>
 Text to lower case =  <b>${GenerateOnlyLowerCase()}</b>
 <br><br>
-Generate only number "0~9" = <b>${GenerateOnlyNumbers()}</b>`)
+Generate only number "0~9" = <b>${GenerateOnlyNumbers()}</b>
+<br><br>
+Create upper case and lower case = <b>${GenerateUpperAndLowerCase()}</b>
+`)
