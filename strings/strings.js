@@ -72,11 +72,29 @@ return list;
 }
 console.log(`Generate only number "0~9" = ${GenerateOnlyNumbers()}`)
 
+
+function randomNum(min, max) {
+    // Math.floor(Math.random() * 10)
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
 function GenerateOnlySymbols()
 {
 //Ie: $, %, !, #, etc
-}
+// 33-47
+// 91-96
+// 58-64
+// 123-126
+let symbol = ["+",",",".","-","'","\"","&","!","?",":",";","#","~","=","/","$","£","^","(",")","_","<",">"]
 
+for (let i=0;i<=symbol.length;i++){
+     result +=  symbol[i]
+}
+}
+// let result = 
+
+
+// console.log(symbol)
 
 function GenerateUpperAndLowerCase()
 {
@@ -84,10 +102,18 @@ function GenerateUpperAndLowerCase()
 }
 
 // }
-
-// `concatanate a(HIHI) with b(How are you?) = ${concatanate("HIHI, ","How are you?")}`)
-// `Take the number 65 and covert it to ASCII char = ${ASCIINumberToChar(65)}`
-// `Reverse the string "Hello" to ${ReverseString(`"Hello"`)}`)
-// Text to upper case GenerateOnlyUpperCase())
-// Text to lower case (GenerateOnlyLowerCase())
-// `Generate only number "0~9" ${GenerateOnlyNumbers()}`
+document.body.innerHTML = 
+(`
+concatanate a(HIHI) with b(How are you?) =  <b>${concatanate("HIHI, ","How are you?")}</b>
+<br><br>
+Take the number 65 and covert it to ASCII char =  <b>${ASCIINumberToChar(65)}</b>
+<br><br>
+Take the character "A" and covert it to number = <b>${CharToAsciiNumber("A")}</b>
+<br><br>
+Reverse the string "Hello" to  <b>${ReverseString(`"Hello"`)}</b>
+<br><br>
+Text to upper case =  <b>${GenerateOnlyUpperCase()}</b>
+<br><br>
+Text to lower case =  <b>${GenerateOnlyLowerCase()}</b>
+<br><br>
+Generate only number "0~9" = <b>${GenerateOnlyNumbers()}</b>`)
