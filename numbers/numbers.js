@@ -162,7 +162,7 @@ increment ${a} by ${b} = <b>${Increment(a, b)}</b>
 <br><br>
 decrement ${a} by ${b} = <b>${Decrement(a, b)}</b> 
 <br><br>
-start from 2 ,end with 5<b>${NumberListA(2, 5)}</b> 
+start from 2 ,end with 5 = <b> ${NumberListA(2, 5)}</b> 
 <br><br>
 start from 2 ,end with 10 and skip 5 <br><b>${NumberListB(2, 10, 5)}</b>
 <br><br>
